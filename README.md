@@ -1,3 +1,3 @@
 # mol2feats
 
-Creates features from molecular coordintaes
+This repository contains python functions to create features from molecular coordintaes.
