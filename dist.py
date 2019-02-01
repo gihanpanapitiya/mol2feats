@@ -1,8 +1,8 @@
-import utils
+from mol2feats import utils
 import numpy as np
 
 
-utils = utils.utils()
+# utils = utils.utils()
 def get_cluster_from_rs(pos, site):
     # f2 = utils()
 
