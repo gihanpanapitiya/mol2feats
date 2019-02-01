@@ -1,4 +1,4 @@
-import utils
+from mol2feats import utils
 import numpy as np
 # import itertools
 # from itertools import combinations
@@ -6,7 +6,7 @@ from itertools import product
 # from itertools import combinations_with_replacement
 
 
-utils = utils.utils()
+# utils = utils.utils()
 def abc_in_layers(mol, site, startl, endl, dB1B2):
     # read the molecular file
     mol = mol
