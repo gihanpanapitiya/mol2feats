@@ -6,7 +6,7 @@ setuptools.setup(
     author="Gihan Panapitiya",
     author_email="gihanuthpala@gmail.com",
     description="A collection of tools to generate features from a molecule",
-    long_description=open('README.rst').read(),
+    long_description=open('README.md').read(),
     packages=setuptools.find_packages(),
     install_requires=[],
     classifiers=[
