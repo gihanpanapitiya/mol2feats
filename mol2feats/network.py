@@ -2,8 +2,6 @@ import networkx as nx
 import numpy as np
 import itertools
 
-dict_ari ={1.:.31, 6.:.77, 16.:1.05, 47.:1.45, 79.:1.36}
-
 
 # 1. Number of Ag atoms up to 3 links of distance = nag_3
 def get_nlinks_atom(GG, site, atom_locs, upto):
@@ -92,7 +90,7 @@ def get_mmlinks(GG, site, auagposs, upto):
 
     return count_mml
 
-def get_dmat(mol):
+def get_dmat(mol, dict_corad):
     natoms = len(mol)
     dmatrix = np.zeros((natoms,natoms))
     pos = mol[:,1:]
