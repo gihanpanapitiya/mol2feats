@@ -55,7 +55,7 @@ def get_nlinks_gen(GG, site, upto):
 
 
 # Number of links up to 3 links of distance that connects 2 metal atoms
-def get_mmlinks(GG, site, auagposs, upto):
+def get_mmlinks(GG, site, atom_locs, upto):
     natoms = len(GG)
     asite = site
     pcont = []
@@ -71,7 +71,7 @@ def get_mmlinks(GG, site, auagposs, upto):
     x1 = pcont[np.nonzero(x)[0]]
 
     #Au or Ag nodes from the adsorption site to upto 3 links away
-    x2  = [ list(set(auagposs).intersection(set(x1[j])) ) for j in range(len(x1))]
+    x2  = [ list(set(atom_locs).intersection(set(x1[j])) ) for j in range(len(x1))]
 
     # flat_list = [item for sublist in x2 for item in sublist]
 
