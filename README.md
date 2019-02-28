@@ -64,8 +64,8 @@ bonds_in_lyers = counts.bonds_inlayers(mol = mol, site = 0, startl = 0, endl = 6
 abc = counts.abc_in_layers(mol = mol, site = 0, startl=0, endl = 6, dB1B2 = blengths)
 
 # Output:: 
-1st columns counts of A-B-C,
-# columns 2-4: A,B and C
+# 1st columns counts of A-B-C
+# Columns 2-4: A,B and C
 #[[1, 1.0, 1.0, 1.0],
 # [4, 1.0, 1.0, 6.0],
 # [0, 1.0, 6.0, 1.0],
@@ -94,6 +94,9 @@ clustering, centroid = dist.get_cluster_from_rs(pos=pos, site=site)
 ```
 
 ## Features based on the graphical representation of the molecule
+
+
+#### Number of 'A' atoms with a path length of 'X' from a specific site
 ``` Python
 from mol2feats import network
 import networkx as nx
@@ -107,8 +110,12 @@ ndmat = np.transpose(np.nonzero(dmat))
 G = nx.Graph()
 G.add_edges_from(ndmat)
 mol = utils.read_mol("benzene2.xyz")
+
+# This code fragment finds the number of S atoms withins a path length of 3 from 
+# atomic site specified by 'site' parameter
+
 S_sites = np.where(mol[:,0]==16)[0]
-numS = network.get_nlinks_atom(atom_locs = S_sites, site=0, GG=G, upto=3)
+numS = network.get_nlinks_atom(atom_locs = S_sites, site=0, GG=G, upto=5)
 
 ```
 
