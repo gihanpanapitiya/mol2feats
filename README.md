@@ -1,6 +1,6 @@
 # mol2feats
 
-This repository contains python functions to create features from molecular coordintaes.
+A collection of functions to create features for molecular systems.
 
 
 # Installation
