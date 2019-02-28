@@ -2,7 +2,7 @@ import setuptools
 setuptools.setup(
     name="mol2feats",
     version="0.1.0",
-    url="https://github.com/username/animalsounds",
+    url="https://github.com/gihanpanapitiya/mol2feats",
     author="Gihan Panapitiya",
     author_email="gihanuthpala@gmail.com",
     description="A collection of tools to generate features from a molecule",
