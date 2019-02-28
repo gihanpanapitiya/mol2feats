@@ -1,6 +1,6 @@
 from mol2feats import utils
 import numpy as np
-# import itertools
+import itertools
 # from itertools import combinations
 from itertools import product
 # from itertools import combinations_with_replacement
@@ -90,7 +90,7 @@ def abc_in_layers(mol, site, startl, endl, dB1B2):
 
 
 # Atom count
-def atoms_inspheres(mol, site, startl, endl):
+def atoms_inlayers(mol, site, startl, endl):
 
     mol = mol
     site = site
@@ -98,11 +98,11 @@ def atoms_inspheres(mol, site, startl, endl):
     endl = endl
     # dB1B2 = dB1B2
 
-    f2 = utils()
+    # f2 = utils()
 
 
     # pos and sym sorted in the ascending order of the distance from site
-    pos,sym, _ = f2.get_sorted_st(mol=mol, site=site)
+    pos,sym, _ = utils.get_sorted_st(mol=mol, site=site)
 
     # nearest neighbor pos and sym
     lp = pos[startl:endl]
@@ -118,7 +118,7 @@ def atoms_inspheres(mol, site, startl, endl):
     return typ_count
 
 # Bond count
-def bonds_inspheres(mol, site, startl, endl):
+def bonds_inlayers(mol, site, startl, endl, dB1B2):
 
     mol = mol
     site = site
@@ -126,11 +126,11 @@ def bonds_inspheres(mol, site, startl, endl):
     endl = endl
     # dB1B2 = dB1B2
 
-    f2 = utils()
+    # f2 = utils()
 
 
     # pos and sym sorted in the ascending order of the distance from site
-    pos,sym, _ = f2.get_sorted_st(mol=mol, site=site)
+    pos,sym, _ = utils.get_sorted_st(mol=mol, site=site)
 
     # nearest neighbor pos and sym
     lp = pos[startl:endl]
@@ -171,7 +171,7 @@ def bonds_inspheres(mol, site, startl, endl):
             for j in range(i,len(rpos)):
     #             print(i,j)
 
-                d1 = f2.dist_between_two(lp[lpos[i]], lp[rpos[j]])
+                d1 = utils.dist_between_two(lp[lpos[i]], lp[rpos[j]])
                 nnH = np.logical_and(d1 < dB1B2[el[0]][el[1]] +.2, d1 > dB1B2[el[0]][el[1]] -.2 )
                 if nnH:
 #                     print(nnH)
