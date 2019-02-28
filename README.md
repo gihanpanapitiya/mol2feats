@@ -1,7 +1,7 @@
 # mol2feats
 
 A collection of functions to create features for molecular systems.
-
+![](https://github.com/gihanpanapitiya/mol2feats/tree/master/mol2feats/molf.png)
 
 # Installation
 (1) Download mol2feats directory </br>
