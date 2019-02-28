@@ -57,8 +57,8 @@ bonds_in_lyers = counts.bonds_inlayers(mol=mol, site=0, startl=0, endl=6,dB1B2=b
 
 abc = counts.abc_in_layers(mol=mol, site=0,startl=0,endl=6,dB1B2=blengths)
 
-Output:: 1st columns counts of A-B-C,
-columns 2-4: A,B and C
+# Output:: 1st columns counts of A-B-C,
+# columns 2-4: A,B and C
 #[[1, 1.0, 1.0, 1.0],
 # [4, 1.0, 1.0, 6.0],
 # [0, 1.0, 6.0, 1.0],
