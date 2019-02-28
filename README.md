@@ -1,7 +1,7 @@
 # mol2feats
 
 A collection of functions to create features for molecular systems.
-![Image of Yaktocat](https://github.com/gihanpanapitiya/mol2feats/blob/master/mol2feats/molf.png)
+
 
 # Installation
 (1) Download mol2feats directory </br>
