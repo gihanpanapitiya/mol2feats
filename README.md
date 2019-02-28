@@ -11,6 +11,7 @@ A collection of functions to create features for molecular systems.
 ```
 
 # Usage
+## Features based on counts of molecular building blocks
 ### (1) Atoms (A) in layers
 
 ```python
@@ -35,13 +36,13 @@ atoms_in_layers = counts.atoms_inlayers(mol=mol,site=0,startl=0, endl=6)
 # This function can be used to automatically find bond lenghts
 # Input:: Symbols and positions of atoms in the molecule  
 
-blengths = utils.get_bond_lengths(mol_ref=mol)
+blengths = utils.get_bond_lengths(mol_ref = mol)
 
 # Output:: A dictionary containing different atom pairs and the corresponding bond lenghts
 # blengths = {1.0: {1.0: 2.4788565912533138, 6.0: 1.0830000000000002}, 6.0: {6.0: 1.3959999999999999}}
 
 
-bonds_in_lyers = counts.bonds_inlayers(mol=mol, site=0, startl=0, endl=6,dB1B2=blengths)
+bonds_in_lyers = counts.bonds_inlayers(mol = mol, site = 0, startl = 0, endl = 6, dB1B2 = blengths)
 ```
 
 
@@ -55,7 +56,7 @@ bonds_in_lyers = counts.bonds_inlayers(mol=mol, site=0, startl=0, endl=6,dB1B2=b
 # endll: 2nd boundary of the layer goeas through atom identified by the index=endl,
 # dB1B2: the dictionary containing the reference bond lengths
 
-abc = counts.abc_in_layers(mol=mol, site=0,startl=0,endl=6,dB1B2=blengths)
+abc = counts.abc_in_layers(mol = mol, site = 0, startl=0, endl = 6, dB1B2 = blengths)
 
 # Output:: 1st columns counts of A-B-C,
 # columns 2-4: A,B and C
