@@ -121,6 +121,6 @@ numS = network.get_nlinks_atom(atom_locs = S_sites, site=0, GG=G, upto=5)
 
 # Reference
 Machine-Learning Prediction of CO Adsorption in Thiolated, Ag-Alloyed Au Nanoclusters, 
-J. Am. Chem. Soc., 2018, 140 (50), pp 17508–17514
+J. Am. Chem. Soc., 2018, 140 (50), pp 17508–17514 </br>
 DOI: 10.1021/jacs.8b08800
 [https://pubs.acs.org/doi/10.1021/jacs.8b08800]
