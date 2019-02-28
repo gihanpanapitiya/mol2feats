@@ -12,7 +12,7 @@ A collection of functions to create features for molecular systems.
 
 # Usage
 ## Features based on counts of molecular building blocks
-### (1) Atoms (A) in layers
+#### Atoms (A) in layers
 
 ```python
 from mol2feats import counts
@@ -30,7 +30,7 @@ atoms_in_layers = counts.atoms_inlayers(mol=mol,site=0,startl=0, endl=6)
 
 ```
 
-### (2) Bonds (A-B) in layers
+#### Bonds (A-B) in layers
 ```python
 
 # This function can be used to automatically find bond lenghts
@@ -46,7 +46,7 @@ bonds_in_lyers = counts.bonds_inlayers(mol = mol, site = 0, startl = 0, endl = 6
 ```
 
 
-### (1) A-B-C fragments in layers (A,B and C are different atom types)
+#### A-B-C fragments in layers (A,B and C are different atom types)
 
 ```python
 
@@ -71,5 +71,22 @@ abc = counts.abc_in_layers(mol = mol, site = 0, startl=0, endl = 6, dB1B2 = blen
 
 ```
 
+## Features based on the distance between atoms
 
+#### Clustering of atoms
+```python
+# This example calcukates the clustering of all the C atoms with respect to the 
+# center of the molecule in Benzene
+
+import numpy as np
+
+pos = mol[mol[:,0]==6][:,1:]
+site = np.mean(pos)
+
+clustering, centroid = dist.get_cluster_from_rs(pos=pos, site=site)
+
+
+
+
+```
 
