@@ -118,3 +118,9 @@ S_sites = np.where(mol[:,0]==16)[0]
 numS = network.get_nlinks_atom(atom_locs = S_sites, site=0, GG=G, upto=5)
 
 ```
+
+## Reference
+Machine-Learning Prediction of CO Adsorption in Thiolated, Ag-Alloyed Au Nanoclusters
+Gihan Panapitiya, Guillermo Avendaño-Franco, Pengju Ren, Xiaodong Wen, Yongwang Li, and James P. Lewis
+
+https://pubs.acs.org/doi/abs/10.1021/jacs.8b08800
